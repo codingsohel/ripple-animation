@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.circles{
+    width: 90vmin;
+    position: relative;
+    height: 90vmin;
+}
+.circles > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: royalblue;
+    border-radius: 50%;
+    opacity: 0;
+    animation: growAndFade 3s infinite ease-out;
+}
+.circles .circle1{
+    animation-delay: 1s;
+}
+.circles .circle2{
+    animation-delay: 2s;
+}
+.circles .circle3{
+    animation-delay: 3s;
+}
+@keyframes growAndFade {
+    0%{
+        opacity: .25;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
